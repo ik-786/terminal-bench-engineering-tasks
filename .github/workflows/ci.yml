@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  local:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pytest
+      - name: Oracle, null and wrong solutions for every task
+        run: python scripts/run_local.py --all
+
+  docker:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        task: [ac-power-flow, truss-analysis, lambert-multirev]
+    defaults:
+      run:
+        working-directory: tasks/${{ matrix.task }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t task-env environment
+      - name: Oracle must score 1
+        run: |
+          out=$(docker run --rm -v "$PWD/tests:/tests" -v "$PWD/solution:/solution" task-env \
+            bash -c "bash /solution/solve.sh && bash /tests/test.sh; cat /logs/verifier/reward.txt")
+          echo "$out" | tail -n 5
+          test "$(echo "$out" | tail -n 1)" = "1"
+      - name: Null must score 0
+        run: |
+          out=$(docker run --rm -v "$PWD/tests:/tests" task-env \
+            bash -c "bash /tests/test.sh; cat /logs/verifier/reward.txt")
+          test "$(echo "$out" | tail -n 1)" = "0"
