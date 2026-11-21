@@ -1,6 +1,7 @@
 # Terminal-Bench engineering tasks
 
 [![CI](https://github.com/ik-786/terminal-bench-engineering-tasks/actions/workflows/ci.yml/badge.svg)](https://github.com/ik-786/terminal-bench-engineering-tasks/actions/workflows/ci.yml)
+![python](https://img.shields.io/badge/python-3.10%2B-blue) ![format](https://img.shields.io/badge/format-Terminal--Bench%20%2F%20Harbor-purple) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
 Three agent benchmark tasks from different engineering disciplines, in the
 [Terminal-Bench](https://www.tbench.ai/) / Harbor task format. Each one asks an agent to write a real
@@ -33,6 +34,8 @@ scripts/run_local.py    runs any task without Docker
 ```
 
 ## How the verifiers work
+
+![How a task is graded](docs/verification.svg)
 
 None of the verifiers store expected outputs to compare against. They recompute the governing
 equations from what the solver returns:
