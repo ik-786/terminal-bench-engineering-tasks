@@ -1,0 +1,61 @@
+{
+ "tap_and_slack_angle": {
+  "converged": true,
+  "n_bus": 5,
+  "reference_q_limited": [
+   2
+  ]
+ },
+ "reactive_limits": {
+  "converged": true,
+  "min_limited": 2,
+  "n_bus": 14,
+  "reference_q_limited": [
+   3,
+   4,
+   12,
+   14
+  ]
+ },
+ "shifter_shunt_outage_ids": {
+  "converged": true,
+  "n_bus": 24,
+  "reference_q_limited": [
+   257,
+   863
+  ]
+ },
+ "limit_release": {
+  "converged": true,
+  "n_bus": 12,
+  "reference_q_limited": [
+   4,
+   8,
+   9
+  ]
+ },
+ "large_57_bus": {
+  "converged": true,
+  "n_bus": 57,
+  "reference_q_limited": [
+   11,
+   12,
+   16
+  ]
+ },
+ "lower_limit": {
+  "converged": true,
+  "n_bus": 18,
+  "reference_q_limited": [
+   3,
+   5,
+   9,
+   11
+  ]
+ },
+ "beyond_collapse": {
+  "converged": false,
+  "n_bus": 10,
+  "reference_q_limited": []
+ }
+}
