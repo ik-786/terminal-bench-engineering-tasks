@@ -1,0 +1,42 @@
+{
+ "pratt_bridge": {
+  "stable": true,
+  "n_nodes": 12,
+  "n_members": 21
+ },
+ "thermal_indeterminate": {
+  "stable": true,
+  "n_nodes": 12,
+  "n_members": 25
+ },
+ "inclined_roller_settlement": {
+  "stable": true,
+  "n_nodes": 10,
+  "n_members": 17
+ },
+ "lack_of_fit": {
+  "stable": true,
+  "n_nodes": 8,
+  "n_members": 15
+ },
+ "missing_diagonal": {
+  "stable": false,
+  "n_nodes": 12,
+  "n_members": 20
+ },
+ "collinear_node": {
+  "stable": false,
+  "n_nodes": 9,
+  "n_members": 14
+ },
+ "parallel_rollers": {
+  "stable": false,
+  "n_nodes": 8,
+  "n_members": 13
+ },
+ "stiff_soft_tower": {
+  "stable": true,
+  "n_nodes": 82,
+  "n_members": 200
+ }
+}
