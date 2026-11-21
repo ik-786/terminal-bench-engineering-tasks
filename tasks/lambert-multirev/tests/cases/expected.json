@@ -1,0 +1,53 @@
+{
+ "leo_to_geo_short": {
+  "feasible": true,
+  "a_km": 25739.530603723986
+ },
+ "long_way_prograde": {
+  "feasible": true,
+  "a_km": 24778.053853879646
+ },
+ "retrograde": {
+  "feasible": true,
+  "a_km": 11654.8332500109
+ },
+ "hyperbolic_fast": {
+  "feasible": true,
+  "a_km": -2266.488512352978
+ },
+ "near_parabolic": {
+  "feasible": true,
+  "a_km": 7757044.625426084
+ },
+ "half_turn_with_normal": {
+  "feasible": true,
+  "a_km": 24582.000000000055
+ },
+ "tiny_angle_inclined": {
+  "feasible": true,
+  "a_km": 3670.9494050034436
+ },
+ "one_rev_low": {
+  "feasible": true,
+  "a_km": 13562.135776130366
+ },
+ "one_rev_high": {
+  "feasible": true,
+  "a_km": 19946.277170849542
+ },
+ "two_rev_low_retro": {
+  "feasible": true,
+  "a_km": 10983.893857051547
+ },
+ "two_rev_high_retro": {
+  "feasible": true,
+  "a_km": 13086.06093692646
+ },
+ "three_rev_too_short": {
+  "feasible": false
+ },
+ "earth_mars_heliocentric": {
+  "feasible": true,
+  "a_km": 193084823.970591
+ }
+}
